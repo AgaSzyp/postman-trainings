@@ -21,17 +21,17 @@
 							"console.log(\"Hello World...\")\r",
 							"\r",
 							"//Setting Variables\r",
-							"pm.globals.set(\"name\",\"Gabby\"); //global\r",
-							"pm.collectionVariables.set(\"name\", \"Cindy\"); //collection\r",
-							"pm.environment.set(\"name\",\"Eden\"); //environment\r",
+							"pm.globals.set(\"name\",\"Glen\"); //global\r",
+							"pm.collectionVariables.set(\"name\", \"Conor\"); //collection\r",
+							"pm.environment.set(\"name\",\"Eveline\"); //environment\r",
 							"pm.variables.set(\"name1\",\"Lorence\"); //local\r",
 							"\r",
 							"//Getting variables\r",
-							"console.log (pm.globals.get(\"name\")); //or\r",
+							"console.log (pm.globals.get(\"name\")); //show global variable on the console or\r",
 							"let varValue=pm.globals.get(\"name\");\r",
 							"console.log (varValue);\r",
 							"pm.collectionVariables.get(\"name\"); //get collection variable\r",
-							"pm.variables.get(\"name\"); //including priority: 1. Local, 2.Data 3.Env 4.Collection 5.Global\r",
+							"pm.variables.get(\"name\"); // priority: 1. Local, 2.Data 3.Env 4.Collection 5.Global\r",
 							"console.log (pm.variables.get(\"name\"))\r",
 							"\r",
 							"pm.environment.unset(\"name\")//remove variable"
@@ -179,6 +179,34 @@
 						"api",
 						"users",
 						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/{{endpoint}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"{{endpoint}}"
 					]
 				}
 			},
