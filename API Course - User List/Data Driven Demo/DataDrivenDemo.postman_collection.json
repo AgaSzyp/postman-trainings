@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "052c0d0b-4c7e-4190-ac0c-94c5c43f427d",
+		"name": "DataDrivenDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31485665",
+		"_collection_link": "https://crimson-water-684895.postman.co/workspace/Automation-Step-by-step-course~fcbfc49c-232f-4418-89ea-6268ad8f6b6b/collection/31485665-052c0d0b-4c7e-4190-ac0c-94c5c43f427d?action=share&source=collection_link&creator=31485665"
+	},
+	"item": [
+		{
+			"name": "DataDrivenDemo",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"tests[\"verify email\"] = responseBody.has(\"data.email\")\r",
+									"tests[\"verify email\"] = responseBody.has(data[\"email\"])"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/{{endpoint}}",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

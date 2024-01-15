@@ -8,6 +8,62 @@
 	},
 	"item": [
 		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "Get user list Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Verify response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"This is a log\")\r",
+									"console.info(\"This is an info\")\r",
+									"console.warn(\"This ia a warning\")\r",
+									"console.error(\"This is an error\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users?page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Get user list",
 			"event": [
 				{
@@ -207,6 +263,37 @@
 					],
 					"path": [
 						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthDemo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
 					]
 				}
 			},
