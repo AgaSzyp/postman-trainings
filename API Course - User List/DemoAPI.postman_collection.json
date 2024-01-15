@@ -26,14 +26,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://reqres.in/api/users?page=2",
-					"protocol": "https",
+					"raw": "{{url}}/users?page=2",
 					"host": [
-						"reqres",
-						"in"
+						"{{url}}"
 					],
 					"path": [
-						"api",
 						"users"
 					],
 					"query": [
@@ -74,14 +71,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://reqres.in/api/users",
-					"protocol": "https",
+					"raw": "{{url}}/users",
 					"host": [
-						"reqres",
-						"in"
+						"{{url}}"
 					],
 					"path": [
-						"api",
 						"users"
 					]
 				}
@@ -103,14 +97,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://reqres.in/api/users/2",
-					"protocol": "https",
+					"raw": "{{url}}/users/2",
 					"host": [
-						"reqres",
-						"in"
+						"{{url}}"
 					],
 					"path": [
-						"api",
 						"users",
 						"2"
 					]
@@ -133,14 +124,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://reqres.in/api/users/2",
-					"protocol": "https",
+					"raw": "{{url}}/users/2",
 					"host": [
-						"reqres",
-						"in"
+						"{{url}}"
 					],
 					"path": [
-						"api",
 						"users",
 						"2"
 					]
@@ -168,6 +156,33 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://reqres.in/api",
+			"type": "string"
 		}
 	]
 }
