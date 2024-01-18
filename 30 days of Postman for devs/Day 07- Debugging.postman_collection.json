@@ -21,6 +21,9 @@
 									"let pics = pm.response.json()\r",
 									"pics.forEach((pic) => { \r",
 									"    console.log(pic.title, pic.url) \r",
+									"    console.info(pic.title, pic.url) \r",
+									"    console.warn(pic.title, pic.url) \r",
+									"    console.error(pic.title, pic.url) \r",
 									"    })"
 								],
 								"type": "text/javascript"
