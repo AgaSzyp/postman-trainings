@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "bd387edf-8dc6-4f11-b3f7-2cf7f400a227",
+		"name": "ipapi.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31485665",
+		"_collection_link": "https://crimson-water-684895.postman.co/workspace/Podstawy-Testowania-Edu~0b421ef9-683d-4d69-b413-5d92365053d2/collection/31485665-bd387edf-8dc6-4f11-b3f7-2cf7f400a227?action=share&source=collection_link&creator=31485665"
+	},
+	"item": [
+		{
+			"name": "Regression Tests",
+			"item": [
+				{
+					"name": "CompleteLocation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/{{$randomIP}}/json",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"{{$randomIP}}",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SpecificLocationField",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/{{IP}}/city",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"{{IP}}",
+								"city"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://ipapi.co",
+			"type": "string"
+		},
+		{
+			"key": "IP",
+			"value": "add your ip"
+		}
+	]
+}
