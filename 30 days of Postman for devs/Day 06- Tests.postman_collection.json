@@ -215,7 +215,7 @@
 	"variable": [
 		{
 			"key": "collectionUid",
-			"value": "",
+			"value": "add id collection",
 			"type": "string"
 		}
 	]

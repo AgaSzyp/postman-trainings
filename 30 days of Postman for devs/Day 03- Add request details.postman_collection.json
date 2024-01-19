@@ -122,7 +122,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.getpostman.com/collections/31485665-ad9cabd6-a555-40e8-849d-e6d29d05f83e",
+							"raw": "https://api.getpostman.com/collections/{{idcollection}}",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -131,7 +131,7 @@
 							],
 							"path": [
 								"collections",
-								"31485665-ad9cabd6-a555-40e8-849d-e6d29d05f83e"
+								"{{idcollection}}"
 							]
 						},
 						"description": "It's time to submit your solution.\n\n1. **Get the collection ID:** Select the collection in the sidebar. In the context bar to the right, select the `Info` icon and copy the collection `ID`. Make sure you're getting the `ID` for the collection, and not this request.\n1. **Update the request URL:** Update the `collectionUid` in the request URL with the `ID` you got from the previous step, using any method you prefer. \n1. **Add your Postman API key**: Add your [Postman API key](https://go.postman.co/settings/me/api-keys) using any method you prefer. You can use the same environment you created in the previous challenge. Or add a collection or global variable, that we will learn about in upcoming challenges.\n> ⚠ DON'T LEAK YOUR SECRETS! \n> Do not paste your API key under the **Headers** tab. Instead, use a variable. When working with variables, it's very important to add sensitive values like an API key to the `CURRENT VALUE` (and not `INITIAL VALUE`) of your public workspace since initial values can be viewed publicly in a public workspace. Storing sensitive values only in `CURRENT VALUE` keeps your secrets private in a team or public workspace. If you accidentally show your API key, [revoke and regenerate your API key](https://go.postman.co/settings/me/api-keys).\n1. **Validate your solution**: Save your changes in the collection and environment. Hit **Send** and look under the **Tests** tab of the server response at the bottom to review your test results.\n\nIf you have any failures, [review the failed test results](https://youtu.be/S3GKLTVRtmE) or ask for support in the [community forum](https://community.postman.com/). When all of your tests pass, you are done with today's challenge. Remember to save your changes as you'll need to pass all the challenges to claim a **30 days of Postman** badge."
@@ -140,6 +140,32 @@
 				}
 			],
 			"description": "Follow the instructions in the request documentation."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "idcollection",
+			"value": "add id collection"
 		}
 	]
 }
