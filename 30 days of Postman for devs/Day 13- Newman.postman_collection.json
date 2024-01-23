@@ -265,6 +265,11 @@
 		{
 			"key": "talls",
 			"value": 7
+		},
+		{
+			"key": "collectionUid",
+			"value": "add id",
+			"type": "string"
 		}
 	]
 }
