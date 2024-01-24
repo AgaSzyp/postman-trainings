@@ -159,7 +159,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.getpostman.com/collections/{{collectionUid}}",
+							"raw": "https://api.getpostman.com/collections/{{collectionId}}",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -168,7 +168,7 @@
 							],
 							"path": [
 								"collections",
-								"{{collectionUid}}"
+								"{{collectionId}}"
 							]
 						},
 						"description": "It's time to submit your solution.\n\n1. **Use a Postman environment:** Find the `Postman API env` environment from the previous challenge. Update the `collectionUid` with the current collection's ID.\n1. **Validate your solution**: Save your changes in the collection and environment. Hit **Send** and look under the **Tests** tab of the server response at the bottom to review your test results.\n\nIf you have any failures, review the failed test results or ask for support in the [community forum](https://community.postman.com/). When all of your tests pass, you are done with today's challenge. Remember to save your changes as you'll need to pass all the challenges to claim a **30 days of Postman** badge."
@@ -197,12 +197,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "collectionUid",
-			"value": "add token"
 		}
 	]
 }
