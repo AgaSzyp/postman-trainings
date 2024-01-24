@@ -176,7 +176,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.getpostman.com/collections/{{collectionId}}?page=7",
+							"raw": "https://api.getpostman.com/collections/{{collectionId}}?page=30",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -190,7 +190,7 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "7"
+									"value": "30"
 								}
 							]
 						},
